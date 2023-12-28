@@ -55,3 +55,20 @@
 # my_l.append(1)
 # my_l.append(4)
 # print(my_l.show())
+
+# buble sort -> selection sort -> insertion sort -> quick sort
+
+### insertion sort ###
+# def insertion_s(list_a):
+#     index_l=range(1,len(list_a))
+    
+#     for i in index_l:
+#         value=list_a[i]
+        
+#         while list_a[i-1]>value and i>0:
+#             list_a[i],list_a[i-1]= list_a[i-1],list_a[i]
+#             i=i-1
+            
+#     return list_a
+
+# print(insertion_s([6,5,8,11,12]))
