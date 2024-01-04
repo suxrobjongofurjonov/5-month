@@ -1,6 +1,6 @@
 import requests
 import time
-import concurrent.futures
+import threading
 
 img_urls = [
     'https://images.unsplash.com/photo-1516117172878-fd2c41f4a759',
@@ -21,10 +21,21 @@ img_urls = [
 ]
 
 start=time.perf_counter()
-for img_url in img_urls:
-    img_by=requests.get(img_url).content
+def image_download(img_url):
+    img_bytes=requests.get(img_url).content
     img_name=img_url.split('/')[3]
+    img_name=f'{img_name}.jpg'
+    with open(img_name, 'wb') as img:
+        img.write(img_bytes)
+        print(f'{img_name} was downloaded ....')
     
-    print(img_name)
+threads=[]    
+for _ in range(10):
+    t=threading.Thread(target=img_urls)
+    t.start()
+    threads.append(t)
+    
+for thread in threads:
+    thread.join()
     
 finish=time.perf_counter()
