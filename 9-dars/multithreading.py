@@ -1,12 +1,12 @@
-import threading
-import time 
-import concurrent.futures
+# import threading
+# import time 
+# import concurrent.futures
 
-start=time.perf_counter()
-def index():
-    print('Running a function.....')
-    time.sleep(2.5)
-    print('Complete a function ...')
+# start=time.perf_counter()
+# def index():
+#     print('Running a function.....')
+#     time.sleep(2.5)
+#     print('Complete a function ...')
     
     
 # with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -49,5 +49,5 @@ def index():
 # thread3.join()
 # thread4.join()
 
-finish=time.perf_counter()
-print(f'finished in {round(finish-start,2)} secs')
+# finish=time.perf_counter()
+# print(f'finished in {round(finish-start,2)} secs')
