@@ -11,4 +11,4 @@ def func(nums, target):
                 return res
         return a
     
-print(func(nums=[1,2,3,4], target=6))
+print(func(nums=[1,3,4,5], target=2))
